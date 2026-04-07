@@ -391,30 +391,7 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
-    <fragment
-        android:id="@+id/toolClockFragment"
-        android:name="com.kylecorry.trail_sense.tools.clock.ui.ToolClockFragment"
-        android:label="ToolClockFragment" />
-    <fragment
-        android:id="@+id/fragmentToolLightning"
-        android:name="com.kylecorry.trail_sense.tools.lightning.ui.FragmentToolLightning"
-        android:label="FragmentToolLightning" />
-    <fragment
-        android:id="@+id/rulerFragment"
-        android:name="com.kylecorry.trail_sense.tools.ruler.ui.RulerFragment"
-        android:label="RulerFragment" />
-    <fragment
-        android:id="@+id/fragmentToolBattery"
-        android:name="com.kylecorry.trail_sense.tools.battery.ui.FragmentToolBattery"
-        android:label="FragmentToolBattery">
-        <action
-            android:id="@+id/action_settings_to_power_settings"
-            app:destination="@id/powerSettingsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+    
     <fragment
         android:id="@+id/fragmentToolTriangulate"
         android:name="com.kylecorry.trail_sense.tools.triangulate.ui.FragmentToolTriangulate"
@@ -477,33 +454,7 @@
             android:defaultValue="0L"
             app:argType="long" />
     </fragment>
-    <fragment
-        android:id="@+id/fragmentToolWhiteNoise"
-        android:name="com.kylecorry.trail_sense.tools.whitenoise.ui.FragmentToolWhiteNoise"
-        android:label="FragmentToolWhiteNoise" />
-    <fragment
-        android:id="@+id/fragmentBacktrack"
-        android:name="com.kylecorry.trail_sense.tools.paths.ui.PathsFragment"
-        android:label="FragmentBacktrack">
-        <action
-            android:id="@+id/action_fragmentBacktrack_to_action_navigation"
-            app:destination="@id/action_navigation"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"
-            app:popUpTo="@id/action_navigation"
-            app:popUpToInclusive="true" />
-
-        <action
-            android:id="@+id/action_backtrack_to_path"
-            app:destination="@id/pathDetailsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-
-    </fragment>
+    
     <fragment
         android:id="@+id/cloudFragment"
         android:name="com.kylecorry.trail_sense.tools.clouds.ui.CloudFragment"
@@ -525,50 +476,12 @@
         android:id="@+id/sensorDetailsFragment"
         android:name="com.kylecorry.trail_sense.tools.sensors.ui.SensorDetailsFragment"
         android:label="SensorDetailsFragment" />
-    <fragment
-        android:id="@+id/toolLightFragment"
-        android:name="com.kylecorry.trail_sense.tools.light.ui.ToolLightFragment"
-        android:label="ToolLightFragment" />
-    <fragment
-        android:id="@+id/tidesFragment"
-        android:name="com.kylecorry.trail_sense.tools.tides.ui.TidesFragment"
-        android:label="TidesFragment">
-        <action
-            android:id="@+id/action_tides_to_tideList"
-            app:destination="@id/tideListFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+    
     <fragment
         android:id="@+id/fragmentToolScreenFlashlight"
         android:name="com.kylecorry.trail_sense.tools.flashlight.ui.FragmentToolScreenFlashlight"
         android:label="FragmentToolScreenFlashlight" />
-    <fragment
-        android:id="@+id/fragmentToolPedometer"
-        android:name="com.kylecorry.trail_sense.tools.pedometer.ui.FragmentToolPedometer"
-        android:label="FragmentToolSpeedometer" />
-    <fragment
-        android:id="@+id/fragmentTurnBackSettings"
-        android:name="com.kylecorry.trail_sense.tools.turn_back.ui.TurnBackSettingsFragment"
-        android:label="TurnBackSettingsFragment" />
-    <fragment
-        android:id="@+id/fragmentWaterBoilTimerSettings"
-        android:name="com.kylecorry.trail_sense.tools.waterpurification.ui.WaterBoilTimerSettingsFragment"
-        android:label="WaterBoilTimerSettingsFragment" />
-    <fragment
-        android:id="@+id/calibrateOdometerFragment"
-        android:name="com.kylecorry.trail_sense.tools.pedometer.ui.PedometerSettingsFragment"
-        android:label="CalibrateOdometerFragment">
-        <action
-            android:id="@+id/action_calibrate_pedometer_to_estimate_stride_length"
-            app:destination="@id/fragmentStrideLengthEstimation"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+    
     <fragment
         android:id="@+id/createTideFragment"
         android:name="com.kylecorry.trail_sense.tools.tides.ui.CreateTideFragment"
@@ -748,70 +661,7 @@
         android:id="@+id/errorSettingsFragment"
         android:name="com.kylecorry.trail_sense.settings.ui.ErrorSettingsFragment"
         android:label="ErrorSettingsFragment" />
-    <fragment
-        android:id="@+id/scanQrFragment"
-        android:name="com.kylecorry.trail_sense.tools.qr.ui.ScanQRFragment"
-        android:label="ScanQRFragment" />
-    <fragment
-        android:id="@+id/augmentedRealityFragment"
-        android:name="com.kylecorry.trail_sense.tools.augmented_reality.ui.AugmentedRealityFragment"
-        android:label="AugmentedRealityFragment">
-        <argument
-            android:name="mode"
-            android:defaultValue="1L"
-            app:argType="long" />
-        <argument
-            android:name="camera_enabled"
-            android:defaultValue="true"
-            app:argType="boolean" />
-    </fragment>
-    <fragment
-        android:id="@+id/fragmentStrideLengthEstimation"
-        android:name="com.kylecorry.trail_sense.tools.pedometer.ui.FragmentStrideLengthEstimation"
-        android:label="FragmentStrideLengthEstimation" />
-    <fragment
-        android:id="@+id/cloudResultsFragment"
-        android:name="com.kylecorry.trail_sense.tools.clouds.ui.CloudResultsFragment"
-        android:label="CloudResultsFragment" />
-    <fragment
-        android:id="@+id/climateFragment"
-        android:name="com.kylecorry.trail_sense.tools.climate.ui.ClimateFragment"
-        android:label="ClimateFragment" />
-    <fragment
-        android:id="@+id/mirrorCameraFragment"
-        android:name="com.kylecorry.trail_sense.tools.mirror.ui.ToolMirrorCameraFragment"
-        android:label="ToolMirrorCameraFragment" />
-    <fragment
-        android:id="@+id/magnifierFragment"
-        android:name="com.kylecorry.trail_sense.tools.magnifier.ui.ToolMagnifierFragment"
-        android:label="ToolMagnifierFragment" />
-    <fragment
-        android:id="@+id/turnBackFragment"
-        android:name="com.kylecorry.trail_sense.tools.turn_back.ui.TurnBackFragment"
-        android:label="TurnBackFragment" />
-    <fragment
-        android:id="@+id/fragmentLocalMessaging"
-        android:name="com.kylecorry.trail_sense.tools.comms.messaging.ui.FragmentToolLocalMessaging"
-        android:label="FragmentToolLocalMessaging" />
-    <fragment
-        android:id="@+id/fragmentLocalTalk"
-        android:name="com.kylecorry.trail_sense.tools.comms.talk.ui.FragmentToolLocalTalk"
-        android:label="FragmentToolLocalTalk" />
-    <fragment
-        android:id="@+id/toolsSettingsFragment"
-        android:name="com.kylecorry.trail_sense.tools.tools.ui.ToolsSettingsFragment"
-        android:label="ToolsSettingsFragment" />
-    <fragment
-        android:id="@+id/fragmentToolErrorHandler"
-        android:name="com.kylecorry.trail_sense.main.errors.ErrorHandlerFragment"
-        android:label="ErrorHandlerFragment">
-        <argument
-            android:name="tool_id"
-            app:argType="long" />
-        <argument
-            android:name="error"
-            android:defaultValue=""
-            app:argType="string" />
-    </fragment>
+    
+    
 
 </navigation>

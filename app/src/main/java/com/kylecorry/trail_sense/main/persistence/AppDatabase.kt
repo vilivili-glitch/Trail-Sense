@@ -26,8 +26,6 @@ import com.kylecorry.trail_sense.tools.field_guide.infrastructure.FieldGuidePage
 import com.kylecorry.trail_sense.tools.field_guide.infrastructure.FieldGuidePageEntity
 import com.kylecorry.trail_sense.tools.field_guide.infrastructure.FieldGuideSightingDao
 import com.kylecorry.trail_sense.tools.field_guide.infrastructure.FieldGuideSightingEntity
-import com.kylecorry.trail_sense.tools.lightning.infrastructure.persistence.LightningStrikeDao
-import com.kylecorry.trail_sense.tools.lightning.infrastructure.persistence.LightningStrikeEntity
 import com.kylecorry.trail_sense.tools.navigation.infrastructure.persistence.NavigationBearingDao
 import com.kylecorry.trail_sense.tools.navigation.infrastructure.persistence.NavigationBearingEntity
 import com.kylecorry.trail_sense.tools.notes.domain.Note
@@ -59,7 +57,6 @@ import com.kylecorry.trail_sense.tools.weather.infrastructure.persistence.Pressu
  */
 @Suppress("LocalVariableName")
 @Database(
-    entities = [PackItemEntity::class, Note::class, WaypointEntity::class, PressureReadingEntity::class, BeaconEntity::class, BeaconGroupEntity::class, MapEntity::class, BatteryReadingEntity::class, PackEntity::class, CloudReadingEntity::class, PathEntity::class, TideTableEntity::class, TideTableRowEntity::class, PathGroupEntity::class, LightningStrikeEntity::class, MapGroupEntity::class, TideConstituentEntry::class, FieldGuidePageEntity::class, FieldGuideSightingEntity::class, DigitalElevationModelEntity::class, NavigationBearingEntity::class, CachedTileEntity::class],
     version = 49,
     exportSchema = false
 )
@@ -79,7 +76,6 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun cloudDao(): CloudReadingDao
     abstract fun pathDao(): PathDao
     abstract fun pathGroupDao(): PathGroupDao
-    abstract fun lightningDao(): LightningStrikeDao
     abstract fun fieldGuidePageDao(): FieldGuidePageDao
     abstract fun fieldGuideSightingDao(): FieldGuideSightingDao
     abstract fun digitalElevationModelDao(): DigitalElevationModelDao

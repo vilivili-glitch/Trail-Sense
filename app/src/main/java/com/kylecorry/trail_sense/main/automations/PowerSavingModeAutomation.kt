@@ -5,7 +5,6 @@ import com.kylecorry.trail_sense.shared.UserPreferences
 import com.kylecorry.trail_sense.shared.automations.Automation
 import com.kylecorry.trail_sense.tools.battery.BatteryToolRegistration
 import com.kylecorry.trail_sense.tools.paths.PathsToolRegistration
-import com.kylecorry.trail_sense.tools.pedometer.PedometerToolRegistration
 import com.kylecorry.trail_sense.tools.weather.WeatherToolRegistration
 
 object PowerSavingModeAutomation {
@@ -17,7 +16,6 @@ object PowerSavingModeAutomation {
             listOfNotNull(
                 if (prefs.lowPowerModeDisablesWeather) WeatherToolRegistration.ACTION_PAUSE_WEATHER_MONITOR else null,
                 if (prefs.lowPowerModeDisablesBacktrack) PathsToolRegistration.ACTION_PAUSE_BACKTRACK else null,
-                PedometerToolRegistration.ACTION_PAUSE_PEDOMETER
             )
         )
     }
@@ -28,7 +26,6 @@ object PowerSavingModeAutomation {
             listOf(
                 WeatherToolRegistration.ACTION_RESUME_WEATHER_MONITOR,
                 PathsToolRegistration.ACTION_RESUME_BACKTRACK,
-                PedometerToolRegistration.ACTION_RESUME_PEDOMETER
             )
         )
     }
