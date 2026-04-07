@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="navigation">导航</string>
     <string name="weather">天气</string>
@@ -584,7 +584,7 @@
     <string name="destination_elevation">目的地海拔</string>
     <string name="base_temperature">基础温度</string>
     <string name="base_elevation">基础海拔</string>
-    <string name="coordinate_format_usng">USNG</string>
+    <string name="coordinate_format_usng">美国国家格网 (USNG)</string>
     <string name="delete_pack">删除背包？</string>
     <string name="new_packing_list">创建背包清单</string>
     <string name="no_packing_lists">无背包清单</string>
@@ -1412,11 +1412,11 @@
     <string name="hillshade">山背阴处</string>
     <string name="color_usgs">美国地质勘探局</string>
     <string name="color_grayscale">灰度</string>
-    <string name="color_vibrant">Vibrant</string>
-    <string name="color_muted">Muted</string>
-    <string name="color_viridis">Viridis</string>
-    <string name="color_inferno">Inferno</string>
-    <string name="color_plasma">Plasma</string>
+    <string name="color_vibrant">鲜艳</string>
+    <string name="color_muted">柔和</string>
+    <string name="color_viridis">翠绿 (Viridis)</string>
+    <string name="color_inferno">地狱火 (Inferno)</string>
+    <string name="color_plasma">等离子 (Plasma)</string>
     <string name="color_black">黑</string>
     <string name="color_brown">棕</string>
     <string name="color_gray">灰</string>
@@ -1543,4 +1543,4 @@
     <string name="pref_default_beacon_color_title">默认信标颜色</string>
     <string name="stone">英石</string>
     <string name="stone_format">%s 英石</string>
-</resources>
+<string name="app_name">轨迹感知</string><string name="disclaimer_message_content">Trail Sense (轨迹感知) 仅供参考，开发者不对本应用提供的信息的准确性作任何保证，且该准确性可能会进一步受到您的设备传感器质量和当前环境条件的限制。\n\n使用本应用即表示您理解，Trail Sense 的开发者不能且不会对您在使用 Trail Sense 时的活动可能相关的任何个人伤害、死亡、财产损失及其他危险承担责任。\n\nTrail Sense 的开发者不对您如何使用所提供的数据负责，您使用该数据的风险由您自行承担。请不要完全依赖本应用，应始终准备好备用方案和装备。\n\nTrail Sense 在 MIT 许可证下提供</string></resources>
