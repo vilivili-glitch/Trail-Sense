@@ -30,8 +30,6 @@ import com.kylecorry.trail_sense.tools.beacons.domain.Beacon
 import com.kylecorry.trail_sense.tools.beacons.infrastructure.persistence.BeaconEntity
 import com.kylecorry.trail_sense.tools.beacons.infrastructure.persistence.BeaconRepo
 import com.kylecorry.trail_sense.tools.beacons.infrastructure.share.BeaconSender
-import com.kylecorry.trail_sense.tools.tides.subsystem.TidesSubsystem
-import com.kylecorry.trail_sense.tools.tides.ui.TideFormatter
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tools
 import com.kylecorry.trail_sense.tools.weather.infrastructure.subsystem.WeatherSubsystem
 import com.kylecorry.trail_sense.tools.weather.ui.dialogs.ShowHighLowTemperatureDialogCommand
@@ -46,8 +44,6 @@ class BeaconDetailsFragment : BoundFragment<FragmentBeaconDetailsBinding>() {
     private val prefs by lazy { UserPreferences(requireContext()) }
     private val gps by lazy { SensorService(requireContext()).getGPS() }
     private val weather by lazy { WeatherSubsystem.getInstance(requireContext()) }
-    private val tides by lazy { TidesSubsystem.getInstance(requireContext()) }
-    private val tideFormatter by lazy { TideFormatter(requireContext()) }
     private val astronomy = AstronomyService()
 
     private var beacon: Beacon? = null
@@ -68,7 +64,6 @@ class BeaconDetailsFragment : BoundFragment<FragmentBeaconDetailsBinding>() {
                 beacon?.apply {
                     updateBeaconTemperature(this)
                     updateBeaconSunTimes(this)
-                    updateBeaconTides(this)
 
                     binding.beaconTitle.title.text = this.name
                     binding.beaconTitle.subtitle.text =
@@ -167,16 +162,6 @@ class BeaconDetailsFragment : BoundFragment<FragmentBeaconDetailsBinding>() {
 
     }
 
-    private suspend fun updateBeaconTides(beacon: Beacon) {
-        val tide = tides.getNearestTide(beacon.coordinate)
-        println(tide)
-        if (tide != null) {
-            binding.beaconTide.title = tideFormatter.getTideTypeName(tide.now.type)
-        } else {
-            binding.beaconGrid.removeView(binding.beaconTide)
-        }
-        binding.beaconTide.setImageResource(tideFormatter.getTideTypeImage(tide?.now?.type))
-    }
 
     private suspend fun updateBeaconTemperature(beacon: Beacon) {
         val temperatureRange = weather.getTemperatureRange(

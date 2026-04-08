@@ -7,7 +7,7 @@
         app:title="@string/general">
 
         <Preference
-            app:icon="@drawable/ruler"
+            app:icon="@drawable/ic_tool_distance_convert"
             app:key="@string/pref_unit_settings"
             app:title="@string/units" />
         <Preference

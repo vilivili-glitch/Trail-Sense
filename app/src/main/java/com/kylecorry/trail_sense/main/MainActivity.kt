@@ -57,7 +57,6 @@ import com.kylecorry.trail_sense.tools.astronomy.domain.AstronomyService
 import com.kylecorry.trail_sense.tools.battery.BatteryToolRegistration
 import com.kylecorry.trail_sense.tools.battery.infrastructure.commands.PowerSavingModeAlertCommand
 import com.kylecorry.trail_sense.tools.flashlight.infrastructure.FlashlightSubsystem
-import com.kylecorry.trail_sense.tools.pedometer.infrastructure.subsystem.PedometerSubsystem
 import com.kylecorry.trail_sense.tools.tools.infrastructure.ToolVolumeActionPriority
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tools
 
@@ -246,7 +245,6 @@ class MainActivity : AndromedaActivity() {
         isRunning = true
         updateAllWidgets()
         FlashlightSubsystem.getInstance(this).startSystemMonitor()
-        PedometerSubsystem.getInstance(this).recalculateState()
         Tools.subscribe(
             BatteryToolRegistration.BROADCAST_POWER_SAVING_MODE_ENABLED,
             ::onPowerSavingModeChanged

@@ -337,7 +337,7 @@ class MapFragment : TrailSenseReactiveFragment(R.layout.fragment_tool_map) {
                                     )
                                     manager.setSelectedLocation(null)
                                 },
-                                ActionItem(getString(R.string.distance), R.drawable.ruler) {
+                                ActionItem(getString(R.string.distance), R.drawable.ic_tool_distance_convert) {
                                     startDistanceMeasurement(location, true)
                                     manager.setSelectedLocation(null)
                                 },

@@ -49,11 +49,8 @@ import com.kylecorry.trail_sense.tools.climate.infrastructure.ClimatePreferenceR
 import com.kylecorry.trail_sense.tools.map.infrastructure.MapPreferences
 import com.kylecorry.trail_sense.tools.navigation.infrastructure.NavigationPreferences
 import com.kylecorry.trail_sense.tools.photo_maps.infrastructure.PhotoMapPreferences
-import com.kylecorry.trail_sense.tools.ruler.infrastructure.RulerPreferences
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tools
 import com.kylecorry.trail_sense.tools.tools.ui.sort.ToolSortType
-import com.kylecorry.trail_sense.tools.turn_back.infrastructure.TurnBackPreferences
-import com.kylecorry.trail_sense.tools.waterpurification.infrastructure.WaterBoilTimerPreferences
 import com.kylecorry.trail_sense.tools.weather.infrastructure.WeatherPreferences
 import java.time.Duration
 
@@ -68,7 +65,6 @@ class UserPreferences(ctx: Context) : IDeclinationPreferences {
     val map by lazy { MapPreferences(context) }
     val weather by lazy { WeatherPreferences(context) }
     val astronomy by lazy { AstronomyPreferences(context) }
-    val ruler by lazy { RulerPreferences(context) }
     val flashlight by lazy { FlashlightPreferenceRepo(context) }
     val cellSignal by lazy { CellSignalPreferences(context) }
     val metalDetector by lazy { MetalDetectorPreferences(context) }
@@ -88,8 +84,6 @@ class UserPreferences(ctx: Context) : IDeclinationPreferences {
     val backup by lazy { BackupPreferences(context) }
     val ballistics by lazy { BallisticsPreferences(context) }
     val climate by lazy { ClimatePreferenceRepo(context) }
-    val waterBoilTimer by lazy { WaterBoilTimerPreferences(context) }
-    val turnBack by lazy { TurnBackPreferences(context) }
     val bubbleLevel by lazy { BubbleLevelPreferences(context) }
 
     private val isMetricPreferred = Resources.isMetricPreferred(context)

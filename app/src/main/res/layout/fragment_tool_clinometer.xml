@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:leftButtonIcon="@drawable/ic_camera"
-        app:rightButtonIcon="@drawable/ruler"
+        app:rightButtonIcon="@drawable/ic_tool_distance_convert"
         tools:subtitle="10% slope"
         tools:title="10" />
 
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:dataPointDescription="@string/height"
-            app:dataPointIcon="@drawable/ruler" />
+            app:dataPointIcon="@drawable/ic_tool_distance_convert" />
 
     </LinearLayout>
 

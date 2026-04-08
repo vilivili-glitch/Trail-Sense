@@ -29,10 +29,8 @@ import com.kylecorry.trail_sense.tools.map.map_layers.MyLocationGeoJsonSource
 import com.kylecorry.trail_sense.tools.navigation.infrastructure.Navigator
 import com.kylecorry.trail_sense.tools.navigation.map_layers.NavigationGeoJsonSource
 import com.kylecorry.trail_sense.tools.paths.map_layers.PathGeoJsonSource
-import com.kylecorry.trail_sense.tools.pedometer.infrastructure.StepCounter
 import com.kylecorry.trail_sense.tools.photo_maps.map_layers.PhotoMapTileSource
 import com.kylecorry.trail_sense.tools.signal_finder.map_layers.CellTowerGeoJsonSource
-import com.kylecorry.trail_sense.tools.tides.map_layers.TideGeoJsonSource
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tools
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -103,30 +101,8 @@ class PreferenceMigrator private constructor() {
                 prefs.remove("pref_sea_level_pressure_change_thresh")
                 prefs.remove("pref_sea_level_use_rapid")
             },
-            PreferenceMigration(6, 7) { context, prefs ->
-                val distance = prefs.getFloat("odometer_distance")
-                if (distance != null) {
-                    val stride = UserPreferences(context).pedometer.strideLength.meters().value
-                    if (stride > 0f) {
-                        val steps = (distance / stride).toLong()
-                        prefs.putLong(StepCounter.STEPS_KEY, steps)
-                    }
-                }
-                prefs.remove("odometer_distance")
-                prefs.remove("last_odometer_location")
-            },
-            PreferenceMigration(7, 8) { context, _ ->
-                val prefs = UserPreferences(context).ruler
-                val currentScale = prefs.rulerScale
-                if (currentScale == 1f || currentScale == 0f) {
-                    return@PreferenceMigration
-                }
-
-                val dpi = Screen.dpi(context)
-                val ydpi = Screen.ydpi(context)
-                val adjustedDpi = dpi / currentScale
-                prefs.rulerScale = ydpi / adjustedDpi
-            },
+            PreferenceMigration(6, 7) { context, prefs -> },
+            PreferenceMigration(7, 8) { context, _ -> },
             PreferenceMigration(8, 9) { context, prefs ->
                 val userPrefs = UserPreferences(context)
                 prefs.getString("pref_backtrack_frequency")?.toLongOrNull()?.let {
@@ -356,7 +332,7 @@ class PreferenceMigrator private constructor() {
                     ContourGeoJsonSource.SOURCE_ID,
                     NavigationGeoJsonSource.SOURCE_ID,
                     CellTowerGeoJsonSource.SOURCE_ID,
-                    TideGeoJsonSource.SOURCE_ID,
+                    
                     PathGeoJsonSource.SOURCE_ID,
                     BeaconGeoJsonSource.SOURCE_ID,
                     MyLocationGeoJsonSource.SOURCE_ID,

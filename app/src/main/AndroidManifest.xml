@@ -377,31 +377,9 @@
                 android:resource="@xml/app_widget_weather_info" />
         </receiver>
 
-        <receiver
-            android:name="com.kylecorry.trail_sense.tools.tides.widgets.AppWidgetTides"
-            android:exported="false"
-            android:label="@string/tides">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
+        
 
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/app_widget_tides_info" />
-        </receiver>
-
-        <receiver
-            android:name="com.kylecorry.trail_sense.tools.pedometer.widgets.AppWidgetPedometer"
-            android:exported="false"
-            android:label="@string/pedometer">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/app_widget_pedometer_info" />
-        </receiver>
+        
 
         <receiver
             android:name="com.kylecorry.trail_sense.tools.paths.widgets.AppWidgetBacktrack"

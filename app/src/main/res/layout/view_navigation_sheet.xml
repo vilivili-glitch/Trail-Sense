@@ -30,7 +30,7 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:gravity="center"
-            app:dataPointIcon="@drawable/ruler" />
+            app:dataPointIcon="@drawable/ic_tool_distance_convert" />
 
         <com.kylecorry.trail_sense.shared.views.DataPointView
             android:id="@+id/navigation_bearing"

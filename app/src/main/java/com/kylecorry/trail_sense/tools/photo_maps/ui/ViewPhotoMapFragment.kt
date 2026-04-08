@@ -212,7 +212,7 @@ class ViewPhotoMapFragment : BoundFragment<FragmentPhotoMapsViewBinding>() {
                             navigateTo(location)
                             selectLocation(null)
                         },
-                        ActionItem(getString(R.string.distance), R.drawable.ruler) {
+                        ActionItem(getString(R.string.distance), R.drawable.ic_tool_distance_convert) {
                             startDistanceMeasurement(gps.location, location)
                             selectLocation(null)
                         },

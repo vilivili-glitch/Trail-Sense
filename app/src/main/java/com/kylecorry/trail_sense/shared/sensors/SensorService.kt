@@ -64,10 +64,6 @@ import com.kylecorry.trail_sense.shared.sensors.thermometer.CalibratedThermomete
 import com.kylecorry.trail_sense.shared.sensors.thermometer.HistoricThermometer
 import com.kylecorry.trail_sense.shared.sensors.thermometer.ThermometerSource
 import com.kylecorry.trail_sense.tools.navigation.infrastructure.NavigationPreferences
-import com.kylecorry.trail_sense.tools.pedometer.domain.StrideLengthPaceCalculator
-import com.kylecorry.trail_sense.tools.pedometer.infrastructure.AveragePaceSpeedometer
-import com.kylecorry.trail_sense.tools.pedometer.infrastructure.CurrentPaceSpeedometer
-import com.kylecorry.trail_sense.tools.pedometer.infrastructure.StepCounter
 import java.time.Duration
 
 // Maybe use the concept of a use case
@@ -123,27 +119,11 @@ class SensorService(ctx: Context) {
         }
     }
 
-    fun getPedometer(): IPedometer {
-        return if (Permissions.canRecognizeActivity(context)) {
-            Pedometer(context, ENVIRONMENT_SENSOR_DELAY)
-        } else {
-            MockPedometer()
-        }
-    }
 
     fun getSpeedometer(gps: IGPS? = null): ISpeedometer {
         return when (userPrefs.navigation.speedometerMode) {
-            NavigationPreferences.SpeedometerMode.Backtrack -> BacktrackSpeedometer(context)
             NavigationPreferences.SpeedometerMode.GPS -> gps ?: getGPS()
-            NavigationPreferences.SpeedometerMode.CurrentPace -> CurrentPaceSpeedometer(
-                getPedometer(), StrideLengthPaceCalculator(userPrefs.pedometer.strideLength)
-            )
-
-            NavigationPreferences.SpeedometerMode.AveragePace -> AveragePaceSpeedometer(
-                StepCounter(
-                    PreferencesSubsystem.getInstance(context).preferences
-                ), StrideLengthPaceCalculator(userPrefs.pedometer.strideLength)
-            )
+            else -> gps ?: getGPS()
         }
     }
 

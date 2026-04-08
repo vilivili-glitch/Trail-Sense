@@ -45,10 +45,6 @@ import com.kylecorry.trail_sense.tools.photo_maps.domain.MapGroupEntity
 import com.kylecorry.trail_sense.tools.photo_maps.infrastructure.MapDao
 import com.kylecorry.trail_sense.tools.photo_maps.infrastructure.MapGroupDao
 import com.kylecorry.trail_sense.tools.photo_maps.infrastructure.commands.RebaseMapCalibrationWorker
-import com.kylecorry.trail_sense.tools.tides.infrastructure.persistence.TideConstituentEntry
-import com.kylecorry.trail_sense.tools.tides.infrastructure.persistence.TideTableDao
-import com.kylecorry.trail_sense.tools.tides.infrastructure.persistence.TideTableEntity
-import com.kylecorry.trail_sense.tools.tides.infrastructure.persistence.TideTableRowEntity
 import com.kylecorry.trail_sense.tools.weather.infrastructure.persistence.PressureReadingDao
 import com.kylecorry.trail_sense.tools.weather.infrastructure.persistence.PressureReadingEntity
 
@@ -57,7 +53,7 @@ import com.kylecorry.trail_sense.tools.weather.infrastructure.persistence.Pressu
  */
 @Suppress("LocalVariableName")
 @Database(
-    entities = [PackItemEntity::class, Note::class, WaypointEntity::class, PressureReadingEntity::class, BeaconEntity::class, BeaconGroupEntity::class, MapEntity::class, BatteryReadingEntity::class, PackEntity::class, CloudReadingEntity::class, PathEntity::class, TideTableEntity::class, TideTableRowEntity::class, PathGroupEntity::class, MapGroupEntity::class, TideConstituentEntry::class, FieldGuidePageEntity::class, FieldGuideSightingEntity::class, DigitalElevationModelEntity::class, NavigationBearingEntity::class, CachedTileEntity::class],
+    entities = [PackItemEntity::class, Note::class, WaypointEntity::class, PressureReadingEntity::class, BeaconEntity::class, BeaconGroupEntity::class, MapEntity::class, BatteryReadingEntity::class, PackEntity::class, CloudReadingEntity::class, PathEntity::class, PathGroupEntity::class, MapGroupEntity::class, FieldGuidePageEntity::class, FieldGuideSightingEntity::class, DigitalElevationModelEntity::class, NavigationBearingEntity::class, CachedTileEntity::class],
     version = 49,
     exportSchema = false
 )
@@ -66,7 +62,6 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun packItemDao(): PackItemDao
     abstract fun packDao(): PackDao
     abstract fun waypointDao(): WaypointDao
-    abstract fun tideTableDao(): TideTableDao
     abstract fun pressureDao(): PressureReadingDao
     abstract fun beaconDao(): BeaconDao
     abstract fun beaconGroupDao(): BeaconGroupDao

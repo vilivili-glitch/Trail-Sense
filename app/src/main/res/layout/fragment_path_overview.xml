@@ -135,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 app:dataPointDescription="@string/distance"
-                app:dataPointIcon="@drawable/ruler"
+                app:dataPointIcon="@drawable/ic_tool_distance_convert"
                 app:layout_columnWeight="1" />
 
             <com.kylecorry.trail_sense.shared.views.DataPointView

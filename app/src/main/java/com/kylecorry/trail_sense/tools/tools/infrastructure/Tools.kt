@@ -43,17 +43,13 @@ import com.kylecorry.trail_sense.tools.packs.PackingListsToolRegistration
 import com.kylecorry.trail_sense.tools.paths.PathsToolRegistration
 import com.kylecorry.trail_sense.tools.permits.PermitsToolRegistration
 import com.kylecorry.trail_sense.tools.photo_maps.PhotoMapsToolRegistration
-import com.kylecorry.trail_sense.tools.ruler.RulerToolRegistration
 import com.kylecorry.trail_sense.tools.sensors.SensorsToolRegistration
 import com.kylecorry.trail_sense.tools.signal_finder.SignalFinderToolRegistration
 import com.kylecorry.trail_sense.tools.solarpanel.SolarPanelAlignerToolRegistration
 import com.kylecorry.trail_sense.tools.survival_guide.SurvivalGuideToolRegistration
 import com.kylecorry.trail_sense.tools.temperature_estimation.TemperatureEstimateToolRegistration
-import com.kylecorry.trail_sense.tools.tides.TidesToolRegistration
 import com.kylecorry.trail_sense.tools.tools.ui.sort.AlphabeticalToolSort
 import com.kylecorry.trail_sense.tools.triangulate.TriangulateLocationToolRegistration
-import com.kylecorry.trail_sense.tools.turn_back.TurnBackToolRegistration
-import com.kylecorry.trail_sense.tools.waterpurification.WaterBoilTimerToolRegistration
 import com.kylecorry.trail_sense.tools.weather.WeatherToolRegistration
 import com.kylecorry.trail_sense.tools.whistle.WhistleToolRegistration
 import kotlinx.coroutines.CoroutineScope
@@ -66,7 +62,6 @@ object Tools {
     private val registry = listOf(
         FlashlightToolRegistration,
         WhistleToolRegistration,
-        RulerToolRegistration,
         CliffHeightToolRegistration,
         NavigationToolRegistration,
         BeaconsToolRegistration,
@@ -76,8 +71,6 @@ object Tools {
         ClinometerToolRegistration,
         BubbleLevelToolRegistration,
         AstronomyToolRegistration,
-        WaterBoilTimerToolRegistration,
-        TidesToolRegistration,
         BatteryToolRegistration,
         SolarPanelAlignerToolRegistration,
         WeatherToolRegistration,
@@ -94,7 +87,6 @@ object Tools {
         SettingsToolRegistration,
         UserGuideToolRegistration,
         ExperimentationToolRegistration,
-        TurnBackToolRegistration,
         LocalMessagingToolRegistration,
         LocalTalkToolRegistration,
         SurvivalGuideToolRegistration,
