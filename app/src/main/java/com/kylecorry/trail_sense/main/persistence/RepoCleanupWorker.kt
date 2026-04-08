@@ -30,7 +30,7 @@ class RepoCleanupWorker(
             PathService.getInstance(context),
             WeatherRepo.getInstance(context),
             CloudRepo.getInstance(context),
-            LightningRepo.getInstance(context),
+            
             DEMRepo.getInstance(),
             NavigationBearingService.getInstance(context),
             CachedTileRepo.getInstance(context)

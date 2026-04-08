@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fragmentToolErrorHandler" type="id" />
+    <item name="toolsSettingsFragment" type="id" />
+    <item name="augmentedRealityFragment" type="id" />
+    <item name="fragmentToolBattery" type="id" />
+    <item name="climateFragment" type="id" />
+    <item name="cloudResultsFragment" type="id" />
+    <item name="fragmentLocalMessaging" type="id" />
+    <item name="fragmentLocalTalk" type="id" />
+    <item name="magnifierFragment" type="id" />
+    <item name="fragmentBacktrack" type="id" />
+    <item name="action_backtrack_to_path" type="id" />
+    <item name="fragmentToolPedometer" type="id" />
+</resources>

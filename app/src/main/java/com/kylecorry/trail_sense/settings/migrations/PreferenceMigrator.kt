@@ -214,7 +214,7 @@ class PreferenceMigrator private constructor() {
                     12 to Tools.CLIMATE.toInt() + Tools.TOOL_QUICK_ACTION_OFFSET,
                     3 to Tools.TEMPERATURE_ESTIMATION.toInt() + Tools.TOOL_QUICK_ACTION_OFFSET,
                     2 to Tools.CLOUDS.toInt() + Tools.TOOL_QUICK_ACTION_OFFSET,
-                    11 to Tools.LIGHTNING_STRIKE_DISTANCE.toInt() + Tools.TOOL_QUICK_ACTION_OFFSET
+                    11 to 24L.toInt() + Tools.TOOL_QUICK_ACTION_OFFSET
                 )
 
                 for (pref in individualQuickActionPrefs) {
